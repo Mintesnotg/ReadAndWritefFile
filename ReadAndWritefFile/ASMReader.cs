@@ -89,7 +89,7 @@ namespace ReadAndWritefFile
             //C:/Users/Moon/Desktop/ASM
             string folderPath = "C:/Users/Moon/Desktop/ASM_OUT/";
             string fileName = $"{filename}_{DateTime.Now:ddd_MMM_yyyy_hh_mm_ss}.txt";
-            var Logfilename = $"LOG_{DateTime.Now:ddd_MMM_yyyy_hh_mm_ss}.txt";
+            var Logfilename = $"LOG_{DateTime.Now:ddd_MMM_yyyy}.txt";
             //DateTime.Now.ToString("mm")
             //string content = "This is the content that will be written to the file.";
 
