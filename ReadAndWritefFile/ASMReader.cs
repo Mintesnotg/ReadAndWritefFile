@@ -88,8 +88,9 @@ namespace ReadAndWritefFile
         {
             //C:/Users/Moon/Desktop/ASM
             string folderPath = "C:/Users/Moon/Desktop/ASM_OUT/";
-            string fileName = $"{filename}_{DateTime.Now:ddd_MMM_yy}.txt";
-            var Logfilename = $"LOG{DateTime.Now:ddd_MMM_yyyy}.txt";
+            string fileName = $"{filename}_{DateTime.Now:ddd_MMM_yyyy_hh_mm_ss}.txt";
+            var Logfilename = $"LOG_{DateTime.Now:ddd_MMM_yyyy_hh_mm_ss}.txt";
+            //DateTime.Now.ToString("mm")
             //string content = "This is the content that will be written to the file.";
 
             try
@@ -103,7 +104,7 @@ namespace ReadAndWritefFile
                 string filePath = Path.Combine(folderPath, fileName);
                 string logfilepath = Path.Combine(folderPath, Logfilename);
                 File.AppendAllText(filePath, content + Environment.NewLine);
-                File.AppendAllText(logfilepath, content);
+                File.AppendAllText(logfilepath, content+ Environment.NewLine);
 
                 Console.WriteLine("Content written to file successfully.");
             }
